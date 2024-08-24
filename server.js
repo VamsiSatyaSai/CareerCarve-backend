@@ -34,7 +34,7 @@ app.get('/api', (req, response) => {
   });
 });
 
-app.get('/mentors', (req, res) => {
+app.get('/mentor', (req, res) => {
   const { areas_of_expertise, start_time } = req.query; 
   const query = `SELECT mentor.* FROM mentor LEFT JOIN bookings ON mentor.id = bookings.mentor_id WHERE mentor.expertise = ? AND mentor.start_time <= ? AND bookings.id IS NULL `;
 
