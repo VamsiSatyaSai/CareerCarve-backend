@@ -12,7 +12,7 @@ app.listen(3306 , ()=>{
 const connection = mysql.createConnection({
   host:'bkexh4bffdzgsg3wctvq-mysql.services.clever-cloud.com',
   user:'ucg7mgpw3ntmkwut',
-  password:'ucg7mgpw3ntmkwut',
+  password:'youNLtndBR61LnqVDr3C',
   database:'bkexh4bffdzgsg3wctvq'
 });
 
