@@ -3,6 +3,8 @@ const mysql = require('mysql2');
 const cors = require('cors');
 const app = express();
 
+require('dotenv').config();
+
 app.use(cors());
 
 app.listen(3306 , ()=>{
@@ -10,10 +12,10 @@ app.listen(3306 , ()=>{
 });
 
 const connection = mysql.createConnection({
-  host:'bkexh4bffdzgsg3wctvq-mysql.services.clever-cloud.com',
-  user:'ucg7mgpw3ntmkwut',
-  password:'ucg7mgpw3ntmkwut',
-  database:'bkexh4bffdzgsg3wctvq'
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME
 });
 
 connection.connect((err) => {
